@@ -12,8 +12,8 @@
         <servlet-name>demo</servlet-name>
         <url-pattern>/demo</url-pattern>
     </servlet-mapping>
-    
-    <!-- Uncomment me!  
+   
+    <!-- These servlets we added ourselves --> 
     <servlet>
         <servlet-name>list</servlet-name>
         <servlet-class>myapp.ListServlet</servlet-class>
@@ -31,8 +31,6 @@
         <url-pattern>/put</url-pattern>
     </servlet-mapping>
     
-    -->
- 
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
