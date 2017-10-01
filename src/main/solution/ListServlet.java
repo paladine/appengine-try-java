@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ListServlet extends HttpServlet {
+  
   private void setupHeaders(HttpServletResponse resp) {
     resp.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
     resp.setHeader("Pragma", "no-cache"); // HTTP 1.0.
@@ -39,6 +40,6 @@ public class ListServlet extends HttpServlet {
 
     Collection<Item> items = new Datastore().getAll();
 
-    resp.getWriter().println(Json.toJson(items));
+    resp.getWriter().println(Item.toJson(items));
   }
 }
